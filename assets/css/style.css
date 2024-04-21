@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .app::before {
+    content: "";
+    position: fixed;
+    width: 584px;
+    height: 255px;
+    border-radius: 10px;
+    background-color: #00dbde;
+    background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+    animation: animate 2s ease-in-out infinite; }
+  .app .clock {
+    position: relative;
+    width: 700px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px); }
+    .app .clock .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; }
+      .app .clock .container h2 {
+        font-size: 6em;
+        color: #fff; }
+        .app .clock .container h2:nth-child(odd) {
+          padding: 5px 15px;
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.05);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+          margin: 0 10px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          border-right: 1px solid rgba(255, 255, 255, 0.1); }
+      .app .clock .container #seconds {
+        color: red; }
+      .app .clock .container #ampm {
+        position: relative;
+        top: -50px;
+        font-size: 2em;
+        color: #fff;
+        font-weight: 700; }
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(20px); }
+  50% {
+    transform: translateY(-20px); } }
